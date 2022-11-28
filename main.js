@@ -1,9 +1,20 @@
+//Submit of data, either from button press or pressing enter after data input
+const button = document.getElementById("button");
+button.addEventListener("click", grabWeather);
+
+const altSubmit = document.getElementById('search-bar');
+altSubmit.addEventListener('keyup', function onEvent(e) {
+    if (e.key === 'Enter') {
+      grabWeather()
+    }
+});
+
 //Grab weather JSON from weatherapi using city input
 async function grabWeather() {
   let locationValue = document.getElementById("search-bar").value;  
   try {
     const response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=849ac5e0397e441c902142946222211&q=${locationValue}`
+    `https://api.weatherapi.com/v1/current.json?key=849ac5e0397e441c902142946222211&q=${locationValue}`
   );
   const data = await response.json()
   updateFields(data);

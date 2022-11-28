@@ -6,14 +6,13 @@
     <title>Weather Now</title>
     <link rel="icon" type="image/x-icon" href="/favicon.svg">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
   </head>
   <body>
     <section id="rain" class="rain"></section>
     <div class="card">
         <div class="container">
           <div class="item"><input id="search-bar" placeholder="Enter City name" /></div>
-          <div class="item"><button class="button" onclick="grabWeather()">Check weather</button></div>
+          <div class="item"><button id="button">Check weather</button></div>
         </div>
     <div id="weather-loading">
         <div class="location">
@@ -28,6 +27,7 @@
           <div id="humidity"></div>
           <div id="wind"></div>
         </div> 
-    </div>       
+    </div>   
+    <script src="main.js"></script>    
   </body>
 </html>
