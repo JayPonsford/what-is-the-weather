@@ -14,7 +14,7 @@ async function grabWeather() {
   let locationValue = document.getElementById("search-bar").value;  
   try {
     const response = await fetch(
-    `https://api.weatherapi.com/v1/current.json?key=849ac5e0397e441c902142946222211&q=${locationValue}`
+    `//api.weatherapi.com/v1/current.json?key=849ac5e0397e441c902142946222211&q=${locationValue}`
   );
   const data = await response.json()
   updateFields(data);
